@@ -1,0 +1,9 @@
+{
+  "hello": "Hello World",
+  "homePage": "Home Page",
+  "aboutPage": "About Page",
+  "welcome": "Hello {name}",
+  "aboutus": {
+    "title": "About us page"
+  }
+}

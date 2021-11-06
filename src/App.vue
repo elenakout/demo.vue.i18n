@@ -1,12 +1,30 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">{{ $t('homePage')}}</router-link> |
+      <router-link to="/about">{{ $t('aboutPage')}}</router-link>
     </div>
     <router-view/>
+
+    <div class="lang">
+      <select v-model="$i18n.locale" @change="changeLanguage">
+        <option value="en">English</option>
+        <option value="gr">Greek</option>
+    </select>
+    </div>
   </div>
+
 </template>
+
+<script>
+export default {
+  methods: {
+    changeLanguage(obj) {
+      localStorage.setItem('language', obj.target.value);
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
